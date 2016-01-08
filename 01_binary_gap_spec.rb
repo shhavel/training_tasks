@@ -20,24 +20,23 @@
 #         expected worst-case space complexity is O(1).
 
 
-def solution(n)
-  max_gap     = 0
-  current_gap = 0
-  one_met     = false
-  n.to_s(2).each_char do |digit|
-    if digit == '0'
-      current_gap += 1 if one_met
-    else # d == '1'
-      one_met = true
-      max_gap = [max_gap, current_gap].max
-      current_gap = 0
-    end
-  end
-  max_gap
-end
-
-
 describe "solution" do
+  def solution(n)
+    max_gap     = 0
+    current_gap = 0
+    one_met     = false
+    n.to_s(2).each_char do |digit|
+      if digit == '0'
+        current_gap += 1 if one_met
+      else # d == '1'
+        one_met = true
+        max_gap = [max_gap, current_gap].max
+        current_gap = 0
+      end
+    end
+    max_gap
+  end
+
   context "example1" do
     it { expect(solution(1041)).to eq 5 }
   end
