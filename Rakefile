@@ -3,5 +3,6 @@ begin
   RSpec::Core::RakeTask.new(:spec) do |t|
     t.pattern = '*_spec.rb'
   end
+  task default: :spec
 rescue LoadError
 end
