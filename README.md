@@ -25,3 +25,21 @@ Count minimal number of jumps from position X to Y.
 ### Tape Equilibrium
 
 Minimize the value |(A[0] + ... + A[P-1]) - (A[P] + ... + A[N-1])|.
+
+## 4. Counting Elements
+
+### Missing Integer
+
+Find the minimal positive integer not occurring in a given sequence.
+
+### Frog River One
+
+Find the earliest time when a frog can jump to the other side of a river.
+
+### Perm Check
+
+Check whether array A is a permutation.
+
+### Max Counters
+
+Calculate the values of counters after applying all alternating operations: increase counter by 1; set value of all counters to current maximum.
