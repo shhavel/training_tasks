@@ -54,7 +54,7 @@
 describe "solution" do
   def solution(a)
     n = a.size
-    r = (1..n).map { |_| 0 }
+    r = Array.new(n, 0)
     a.each do |e|
       next if e < 1 || e > n
       r[e-1] += 1
