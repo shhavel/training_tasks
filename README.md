@@ -1,4 +1,4 @@
-# Codility Train Lessons [![Build Status](https://api.travis-ci.org/shhavel/codility_train_ruby.svg?branch=master)](https://travis-ci.org/shhavel/codility_train_ruby)
+# Codility Train Lessons Ruby Solutions [![Build Status](https://api.travis-ci.org/shhavel/codility_train_ruby.svg?branch=master)](https://travis-ci.org/shhavel/codility_train_ruby)
 
 ## 1. Iterations
 
@@ -43,3 +43,21 @@ Check whether array A is a permutation.
 ### Max Counters
 
 Calculate the values of counters after applying all alternating operations: increase counter by 1; set value of all counters to current maximum.
+
+## 5. Prefix Sums
+
+### Count Div
+
+Compute number of integers divisible by k in range [a..b].
+
+### Passing Cars
+
+Count the number of passing cars on the road.
+
+### Genomic Range Query
+
+Find the minimal nucleotide from a range of sequence DNA.
+
+### Min Avg Two Slice
+
+Find the minimal average of any slice containing at least two elements.
