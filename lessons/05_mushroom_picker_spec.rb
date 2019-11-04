@@ -1,5 +1,3 @@
-# https://codility.com/media/train/3-PrefixSums.pdf
-
 describe "mushrooms" do
   def max(*args)
     args.max
