@@ -4,8 +4,8 @@ describe "solution" do
     c = 0
     a.sort.each do |y|
       if y != x
-       c += 1
-       x = y
+        c += 1
+        x = y
       end
     end
     c
