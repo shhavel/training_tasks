@@ -1,4 +1,6 @@
-describe "solution" do
+# frozen_string_literal: true
+
+describe 'solution' do
   def solution(a)
     n = a.size
     (n + 2) * (n + 1) / 2 - a.reduce(0, :+)

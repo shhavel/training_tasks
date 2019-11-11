@@ -1,6 +1,8 @@
-describe "solution" do
+# frozen_string_literal: true
+
+describe 'solution' do
   def solution(s, p, q)
-    nucleotides_to_impact_factors =  { 'A' => 1, 'C' => 2, 'G' => 3, 'T' => 4 }
+    nucleotides_to_impact_factors = { 'A' => 1, 'C' => 2, 'G' => 3, 'T' => 4 }
     sequence_of_impact_factors = s.each_char.map { |n| nucleotides_to_impact_factors[n] }
     idx = -1
     prefix_max_a_idxs = sequence_of_impact_factors.map.with_index { |f, i| idx = i if f == 1; idx }
@@ -22,7 +24,7 @@ describe "solution" do
     end
   end
 
-  context "example1" do
+  context 'example1' do
     it { expect(solution('CAGCCTA', [2, 5, 0], [4, 5, 6])).to eq [2, 4, 1] }
   end
 end

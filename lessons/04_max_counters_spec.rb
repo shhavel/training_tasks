@@ -1,4 +1,6 @@
-describe "solution" do
+# frozen_string_literal: true
+
+describe 'solution' do
   def solution(n, a)
     inf = 0
     m = 0
@@ -14,7 +16,7 @@ describe "solution" do
     cs.map { |c| [c, inf].max }
   end
 
-  context "example1" do
+  context 'example1' do
     it { expect(solution(5, [3, 4, 4, 6, 1, 4, 4])).to eq [3, 2, 2, 4, 2] }
   end
 end

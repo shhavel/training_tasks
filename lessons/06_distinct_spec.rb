@@ -1,4 +1,6 @@
-describe "solution" do
+# frozen_string_literal: true
+
+describe 'solution' do
   def solution(a)
     x = nil
     c = 0

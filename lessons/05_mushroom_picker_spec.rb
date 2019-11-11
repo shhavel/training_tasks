@@ -1,4 +1,6 @@
-describe "mushrooms" do
+# frozen_string_literal: true
+
+describe 'mushrooms' do
   def max(*args)
     args.max
   end
