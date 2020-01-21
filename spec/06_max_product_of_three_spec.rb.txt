@@ -1,0 +1,34 @@
+# frozen_string_literal: true
+
+describe 'solution' do
+  def solution(a)
+    positeves, negatives = a.partition(&:positive?  )
+
+    # m, n, l, ...  ,i, j, k 0, ..., p, q, r
+
+    m, n, l = negatives.min(3)
+    k, j, i = negatives.max(3)
+    p, q, r = positeves.max(3)
+    if p   # tree positives
+      if n # two negatives
+        return [m * n, p * q].max * r
+      else
+        return p * q * r
+      end
+    end
+    if q # two positives
+
+    end
+    return m * n * r if r # one positive
+
+    # puts "STATE: #{[m, n, l, p, q, r].inspect}"
+  end
+
+  it { expect(solution([-3, 1, 2, -2, 5, 6])).to eql(60) }
+  it { expect(solution([5, -4, -4])).to eql(80) }
+  it { expect(solution([5, 4, -4])).to eql(-80) }
+  it { expect(solution([-1, 0, 1])).to eql(0) }
+  it { expect(solution([-1, 0, 1, 1])).to eql(0) }
+  it { expect(solution([-1, -1, 0, 1, 1])).to eql(1) }
+  it { expect(solution([-6, -5, -4, -3, -2, -1])).to eql(-6) }
+end
