@@ -6,7 +6,8 @@ describe 'solution' do
     a.sort!
     x, y = a[0], a[1]
     a[2..-1].each do |z|
-      return 1 if x.positive? && x + y > z
+      # return 1 if x.positive? && x + y > z
+      return 1 if x > 0 && x + y > z
       x, y = y, z
     end
     0
