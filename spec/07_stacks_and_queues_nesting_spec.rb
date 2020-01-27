@@ -6,7 +6,6 @@ describe 'solution' do
     return 1 if len == 0
     return 0 if len.odd?
     opening_parenthesis = '('
-    closing_parenthesis = ')'
     opened = 0
     s.each_char do |parenthesis|
       if parenthesis == opening_parenthesis

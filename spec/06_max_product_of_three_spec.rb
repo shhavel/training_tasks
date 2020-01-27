@@ -5,7 +5,7 @@ describe 'solution' do
     positeves, negatives_and_zeros = a.partition { |x| x > 0 }
     zeros, negatives = negatives_and_zeros.partition(&:zero?)
 
-    m, n, l = negatives.min(3)
+    m, n = negatives.min(2)
     p, q, r = positeves.max(3)
 
     if positeves.size >= 3 # >= 3 positeves
@@ -39,6 +39,6 @@ describe 'solution' do
   it { expect(solution([-1, 0, 1, 1])).to eql(0) }
   it { expect(solution([-1, -1, 0, 1, 1])).to eql(1) }
   it { expect(solution([-6, -5, -4, -3, -2, -1])).to eql(-6) }
-  it { expect(solution((-1000..1000).to_a)).to eql(999000000) }
-  it { expect(solution((-10..10).to_a * 2000 + [-1000, 500, -1])).to eql(5000000) }
+  it { expect(solution((-1000..1000).to_a)).to eql(999_000_000) }
+  it { expect(solution((-10..10).to_a * 2000 + [-1000, 500, -1])).to eql(5_000_000) }
 end

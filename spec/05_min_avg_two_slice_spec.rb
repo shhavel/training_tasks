@@ -4,7 +4,7 @@ describe 'solution' do
   def solution(a)
     min_avg_pos = 0 # The begin position of the first slice with mininal average
     min_sum = (a[0] + a[1]) * 3 # The mininal sum candidate (average * 6)
-    for i in (0..(a.size - 3)) do
+    (0..(a.size - 3)).each do |i|
       # Try the next 2-element slice
       if (s6 = (a[i] + a[i+1]) * 3) < min_sum
         min_avg_pos, min_sum = i, s6

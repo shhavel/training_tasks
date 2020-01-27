@@ -4,21 +4,13 @@ describe 'solution' do
   def solution(a, b)
     alive = 0 # upstream alive
     downstream = []
-    a.zip(b).each do |f, d|
-      if d == 1
-        downstream << f # adding a new fish to lead downstream flowing fished
-      else
-        if downstream.empty?
-          alive += 1 # flowing upstream fish stayed alive
-        else
-          # clash of counter directions
-          downstream.reverse_each do |df|
-            break if df > f # flowing upstream fish was eaten
-            downstream.pop  # flowing downstream fish was eaten
-          end
-          alive += 1 if downstream.empty?
-        end
-      end
+    a.zip(b).each do |fish, dir|
+      next downstream << fish if dir == 1 # adding a new fish to lead downstream flowing fished
+      # current fish flows upstream
+      next alive += 1 if downstream.empty? # flowing upstream fish stayed alive
+      # clash of counter directions
+      downstream.pop while downstream.any? && downstream.last < fish # downstream fishes are being eaten
+      alive += 1 if downstream.empty? # flowing upstream fish survived
     end
     alive + downstream.length
   end

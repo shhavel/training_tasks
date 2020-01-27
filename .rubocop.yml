@@ -33,3 +33,12 @@ Style/YodaCondition:
 
 Style/Semicolon:
   Enabled: No
+
+Style/IfUnlessModifier:
+  Enabled: No
+
+Style/IfInsideElse:
+  Enabled: No
+
+Style/WhileUntilModifier:
+  Enabled: No

@@ -11,7 +11,7 @@ describe 'solution' do
       ends[e] += 1
     end
     ins, opened = 0, 0
-    starts.zip(ends).each_with_index do |(s, e), i|
+    starts.zip(ends).each do |(s, e)|
       ins += opened * s + s*(s-1)/2
       return -1 if ins > max_ins
       opened += s - e
