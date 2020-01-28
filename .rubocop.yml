@@ -42,3 +42,6 @@ Style/IfInsideElse:
 
 Style/WhileUntilModifier:
   Enabled: No
+
+Style/NumericLiterals:
+  Enabled: No

@@ -6,21 +6,11 @@ describe 'solution' do
     return 0 if len.zero?
     a2 = Array.new(len, 0)
     (1...len).each { |i| a2[i] = a[i] - a[i-1] }
-    puts "a2 = #{a2.inspect}"
     cur_sum = 0 # current positive sum
     max_sum = 0 # maximum sum so far
     a2.each do |x|
-      if x >= 0
-        cur_sum += x
-      else
-        max_sum = [max_sum, cur_sum].max
-        if cur_sum + x > 0
-          cur_sum += x
-        else
-          cur_sum = 0
-        end
-      end
-      puts "x = #{x}, cur_sum = #{cur_sum}, max_sum = #{max_sum}"
+      max_sum = [max_sum, cur_sum].max
+      cur_sum = [cur_sum + x, 0].max
     end
     [cur_sum, max_sum, 0].max
   end
