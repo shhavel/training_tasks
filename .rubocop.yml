@@ -45,3 +45,6 @@ Style/WhileUntilModifier:
 
 Style/NumericLiterals:
   Enabled: No
+
+Style/AsciiComments:
+  Enabled: No
