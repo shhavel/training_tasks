@@ -2,4 +2,4 @@ language: ruby
 rvm:
   - 2.2.10
 script:
-  - bundle exec rubocop && rake spec
+  - bundle exec rubocop && rspec
