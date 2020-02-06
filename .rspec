@@ -1,4 +1,4 @@
---format doc
 --color
 --tty
+--require spec_helper
 -I lib

@@ -1,50 +1,40 @@
 Naming/UncommunicativeMethodParamName:
   Enabled: No
-
 Style/ParallelAssignment:
   Enabled: No
-
 Layout/EmptyLineAfterGuardClause:
   Enabled: No
-
 Metrics/MethodLength:
   Enabled: No
-
 Metrics/LineLength:
   Enabled: No
-
 Metrics/CyclomaticComplexity:
   Enabled: No
-
 Metrics/PerceivedComplexity:
   Enabled: No
-
 Metrics/AbcSize:
   Enabled: No
-
 Layout/SpaceAroundOperators:
   Enabled: No
-
 Metrics/BlockLength:
   Enabled: No
-
 Style/YodaCondition:
   Enabled: No
-
 Style/Semicolon:
   Enabled: No
-
 Style/IfUnlessModifier:
   Enabled: No
-
 Style/IfInsideElse:
   Enabled: No
-
 Style/WhileUntilModifier:
   Enabled: No
-
 Style/NumericLiterals:
   Enabled: No
-
 Style/AsciiComments:
+  Enabled: No
+Style/NegatedIf:
+  Enabled: No
+Lint/ShadowingOuterLocalVariable:
+  Enabled: No
+Metrics/BlockNesting:
   Enabled: No

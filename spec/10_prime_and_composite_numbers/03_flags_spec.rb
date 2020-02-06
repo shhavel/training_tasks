@@ -2,7 +2,7 @@
 
 describe 'solution' do
   # Check if k flags can be set.
-  def flags?(k, n, next_peak)
+  def check(k, n, next_peak)
     pos = 0
     num = 0
     while pos < n && num < k
@@ -33,7 +33,7 @@ describe 'solution' do
     flags = 2
     k = 3
     while k * (k - 1) <= n
-      return flags unless flags?(k, n, next_peak) # cannot set k flags (or >= k)
+      return flags unless check(k, n, next_peak) # cannot set k flags (or >= k)
       flags = k
       k += 1
     end
