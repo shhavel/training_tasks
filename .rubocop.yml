@@ -38,3 +38,5 @@ Lint/ShadowingOuterLocalVariable:
   Enabled: No
 Metrics/BlockNesting:
   Enabled: No
+Style/For:
+  Enabled: No

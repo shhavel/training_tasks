@@ -41,6 +41,21 @@ describe 'solution' do
     a.map { |k| a.size - sieve[k].map { |d| a_count[d] }.reduce(:+) }
   end
 
+  # Same but shorter
+  def solution_short(a)
+    n = a.max
+    sieve = a.each_with_object({}) { |x, r| r[x] = [1, x].uniq }
+    a_count = a.each_with_object(Hash.new(0)) { |x, c| c[x] += 1 }
+
+    for i in 2..Math.sqrt(n)
+      for k in (i * i..n).step(i)
+        sieve[k].concat([i, k / i].uniq) if sieve.key?(k)
+      end
+    end
+
+    a.map { |k| a.size - sieve[k].map { |d| a_count[d] }.reduce(:+) }
+  end
+
   it { expect(solution([3, 1, 2, 3, 6])).to eq([2, 4, 3, 2, 0]) }
   it { expect(solution([4, 5, 8, 40])).to eq([3, 3, 2, 0]) }
   it { expect(solution((1..10).to_a)).to eq([9, 8, 8, 7, 8, 6, 8, 6, 7, 6]) }
