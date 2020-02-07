@@ -47,7 +47,7 @@ describe 'solution' do
     sieve = a.each_with_object({}) { |x, r| r[x] = [1, x].uniq }
     a_count = a.each_with_object(Hash.new(0)) { |x, c| c[x] += 1 }
 
-    for i in 2..Math.sqrt(n)
+    for i in 2..Integer.sqrt(n)
       for k in (i * i..n).step(i)
         sieve[k].concat([i, k / i].uniq) if sieve.key?(k)
       end
