@@ -5,5 +5,5 @@ describe 'solution' do
     ((y - x).to_f / d).ceil
   end
 
-  it { expect(solution(10, 85, 30)).to eq 3 }
+  it { expect(solution(10, 85, 30)).to eq(3) }
 end

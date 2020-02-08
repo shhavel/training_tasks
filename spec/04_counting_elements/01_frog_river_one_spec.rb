@@ -12,6 +12,6 @@ describe 'solution' do
   end
 
   context 'example1' do
-    it { expect(solution(5, [1, 3, 1, 4, 2, 3, 5, 4])).to eq 6 }
+    it { expect(solution(5, [1, 3, 1, 4, 2, 3, 5, 4])).to eq(6) }
   end
 end
