@@ -20,7 +20,7 @@ describe 'solution' do
     F[n] % (2 ** m)
   end
 
-  # O(L
+  # O(L)
   def solution(a, b)
     max_pow = 2 ** b.max
     a.zip(b).map { |n, m| fibonacci_modulo(n, max_pow, m) }
