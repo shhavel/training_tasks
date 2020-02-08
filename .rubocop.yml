@@ -40,3 +40,5 @@ Metrics/BlockNesting:
   Enabled: No
 Style/For:
   Enabled: No
+Style/MutableConstant:
+  Enabled: No

@@ -13,7 +13,6 @@ describe 'solution' do
 
   def fibonacci_modulo(n, max_pow, m)
     return 1 if n == 1
-    p = 2 ** m
     (n + 1 - F.length).times do
       F << ((F[-2] + F[-1]) % max_pow)
     end
