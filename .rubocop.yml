@@ -42,3 +42,7 @@ Style/For:
   Enabled: No
 Style/MutableConstant:
   Enabled: No
+Layout/EmptyLineAfterMagicComment:
+  Enabled: No
+Naming/VariableNumber:
+  Enabled: No

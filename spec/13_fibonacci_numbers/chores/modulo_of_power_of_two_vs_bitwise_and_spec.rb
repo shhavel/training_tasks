@@ -13,22 +13,27 @@ describe 'int Array with int default value VS no default' do
 
   it 'compare time' do
     t = 100_000
-    puts ''
     n = rand(10_000_000..20_000_000)
     m = rand(10..20)
-    puts "#{n} % (2 ** #{m})"
+
+    puts "\n  2 ** #{m}"
     Benchmark.bm do |bm|
-      bm.report('n % (2 ** m)      ') do
-        t.times { n % (2 ** m) }
+      bm.report('2 ** m') do
+        t.times { 2 ** m }
       end
-      bm.report('n % (1 << m)      ') do
-        t.times { n % (1 << m) }
+      bm.report('1 << m') do
+        t.times { 1 << m }
       end
-      bm.report('n & ((2 ** m) - 1)') do
-        t.times { n & ((2 ** m) - 1) }
+    end
+
+    pow_of_2 = 2 ** m
+    puts "\n#{n} % pow_of_2"
+    Benchmark.bm do |bm|
+      bm.report('n % pow_of_2      ') do
+        t.times { n % pow_of_2 }
       end
-      bm.report('n & ((1 << m) - 1)') do
-        t.times { n & ((1 << m) - 1) }
+      bm.report('n & (pow_of_2 - 1)') do
+        t.times { n & (pow_of_2 - 1) }
       end
     end
   end
