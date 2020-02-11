@@ -46,3 +46,5 @@ Layout/EmptyLineAfterMagicComment:
   Enabled: No
 Naming/VariableNumber:
   Enabled: No
+Style/Next:
+  Enabled: No
