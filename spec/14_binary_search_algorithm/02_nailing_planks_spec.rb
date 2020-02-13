@@ -32,11 +32,11 @@ describe 'solution' do
 
   # O((N + M) * log(M))
   def solution(a, b, c)
-    _starts = a.map.with_index { |coord, nr| [:start, nr, coord] }
-    _ends   = b.map.with_index { |coord, nr| [:end, nr, coord] }
-    _nails = c.map.with_index { |coord, nr| [:nail, nr, coord] }
+    starts = a.map.with_index { |coord, nr| [:start, nr, coord] }
+    ends   = b.map.with_index { |coord, nr| [:end, nr, coord] }
+    nails = c.map.with_index { |coord, nr| [:nail, nr, coord] }
     order = { start: 0, nail: 1, end: 2 }
-    points = [*_starts, *_nails, *_ends].sort_by! { |ident, _, coord| [coord, order[ident]] }
+    points = [*starts, *nails, *ends].sort_by! { |ident, _, coord| [coord, order[ident]] }
     beg = 1
     ends = c.length
     res = -1

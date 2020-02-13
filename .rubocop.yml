@@ -48,3 +48,5 @@ Naming/VariableNumber:
   Enabled: No
 Style/Next:
   Enabled: No
+Style/AndOr:
+  Enabled: No

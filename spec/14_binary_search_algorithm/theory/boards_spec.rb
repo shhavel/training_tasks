@@ -34,7 +34,7 @@ describe 'Boards' do
 
   def check(a, k, d)
     boards = 0
-    last = -1 # end of the last board
+    last = -1 # end of the last board (covered up to the index)
     a.each_with_index do |x, i|
       if x == 1 && i > last
         return false if boards == k

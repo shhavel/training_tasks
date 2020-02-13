@@ -18,7 +18,15 @@ describe 'Binary search algorithm' do
     res
   end
 
+  def binary_search_using_bsearch(a, x)
+    (0...a.length).bsearch { |i| a[i] >= x }
+  end
+
   it { expect(binary_search([1, 2, 3], 2)).to eq(1) }
   it { expect(binary_search([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16], 11)).to eq(10) }
   it { expect(binary_search([12, 15, 15, 19, 24, 31, 53, 59, 60], 31)).to eq(5) }
+
+  it { expect(binary_search_using_bsearch([1, 2, 3], 2)).to eq(1) }
+  it { expect(binary_search_using_bsearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16], 11)).to eq(10) }
+  it { expect(binary_search_using_bsearch([12, 15, 15, 19, 24, 31, 53, 59, 60], 31)).to eq(5) }
 end
