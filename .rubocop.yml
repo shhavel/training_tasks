@@ -50,3 +50,5 @@ Style/Next:
   Enabled: No
 Style/AndOr:
   Enabled: No
+Style/EmptyMethod:
+  Enabled: No
