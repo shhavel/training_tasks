@@ -52,3 +52,5 @@ Style/AndOr:
   Enabled: No
 Style/EmptyMethod:
   Enabled: No
+Style/GuardClause:
+  Enabled: No
